@@ -1,0 +1,56 @@
+.\" $Id: taarich.man,v 1.8 2003-08-28 16:20:37+03 rl Exp $
+.TH TAARICH 1 "$Date: 2003-08-28 16:20:37+03 $" "$Revision: 1.8 $"
+.SH NAME
+taarich \- display the Hebrew date.
+.SH SYNOPSIS
+.B taarich
+.B [\-h]
+.BI [ day
+.I month
+.IB year ]
+.SH DESCRIPTION
+With no arguments,
+.I taarich
+print today's Hebrew date. If the local time is 6
+.SM PM
+or later, tomorrow date is printed.
+Optionally,
+.I taarich
+accepts 3 numeric arguments, which constitute a Gregorian date, in the 
+form
+.IR day / month / year .
+Dates before 15/10/1582 are considered Julian. The year
+.I Y
+.SM BCE
+is referred to as 
+.IR \-Y+1 .
+If the
+.B \-h
+option is selected, the printing is in Hebrew, using the UTF-8 encoding.
+.SH "SEE ALSO"
+luach (1)
+.P
+Har'El, Z.,
+.IR "Gauss Formula for the Julian Date of Passover" .
+.SH BUGS
+.I taarich
+does not know about the variable transition time from the Julian calendar
+to Gregorian. For instance, the Julian calendar was still in use in Britain
+and America in the early 18th century, and in Russia as late as the early 20th
+century.
+.SH AVAILABILITY
+.I taarich
+is available by anonymous ftp from 
+.I gauss.technion.ac.il
+(132.68.115.2).
+
+.SH AUTHOR
+Dr. Zvi Har'El,
+.br
+Department of Mathematics,
+.br
+Technion, Israel Institute of Technology,
+.br
+Haifa 32000, Israel.
+.br
+E-mail: rl@math.technion.ac.il

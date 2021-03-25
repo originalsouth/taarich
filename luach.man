@@ -1,0 +1,137 @@
+.\" $Id: luach.man,v 1.11 2003-07-21 16:05:41+03 rl Exp $
+.TH LUACH 1 "$Date: 2003-07-21 16:05:41+03 $" "$Revision: 1.11 $"
+.SH NAME
+luach \- typeset a Hebrew calendar.
+.SH SYNOPSIS
+.B luach
+.B [\-ehnidgj]
+.BI [\-. request ]
+.I year
+\&...
+.SH DESCRIPTION
+.I luach 
+typesets the Hebrew/Gregorian calendars for a list of Hebrew years.
+To generate a printout, its output should be piped through
+.IR troff .
+Each Hebrew month is printed in two lines,
+with the latter describing the corresponding partial Gregorian months.
+Days in the week are properly aligned. Jewish holidays are highlighted. 
+.P
+Optionally, the two-line printout of each month may be followed by a third line,
+describing the Pentateuch reading sequence (see appendix). 
+Saturdays are marked by the sequence number of the portion being read in that
+week.  Saturdays in which two consecutive portions are read,
+are marked by the appending a plus sign to the first sequence number.
+Holiday Saturdays, in which the reading is out of the sequence,
+are marked by asterisks.
+.P
+
+.SH OPTIONS
+The options, which may be given in any order, and, unless reset, apply
+to all the following
+.I year
+arguments, are:
+.TP
+.B \-e
+Typeset the calendar in English (the default).
+.TP
+.B \-h
+Typeset the calendar in Hebrew.
+.TP
+.B \-n
+Do not generate a reading sequence (the default).
+.TP
+.B \-i
+Generate a reading sequence used in Israel.
+.TP
+.B \-d
+Generate a reading sequence used in the Diaspora, and highlight the
+additional festival days.
+.TP
+.B \-g
+Generate Gregorian dates for Hebrew dates starting at 19 Tishri 5343
+(the default).
+Note that the Gregorian calendar became official in Great Britain 
+and its colonies (including North America) in 6 Tishri 5513,
+and in Russia in 1 Adar 5678.
+.TP
+.B \-j
+Generate Julian dates.
+.TP
+.BI \-. request
+Issue a
+.I troff
+request before processing the next year.
+As an example,  the setting
+.B "\-.fam\e H"
+(when used in conjunction  with GNU's troff) typesets the calendar
+in Helvetica.
+
+.SH "SEE ALSO"
+taarich(1)
+.P
+Har'El, Z.,
+.IR "Gauss Formula for the Julian Date of Passover" .
+.P
+Har'El, Z.,
+.IR "The Torah Reading Sequence" .
+
+.SH BUGS
+There is no way to highlight the additional festival days observed in the
+Diaspora without printing the reading sequence.
+
+.SH AVAILABILITY
+.I luach
+and the Hebrew
+.I groff
+fonts are available by anonymous ftp from 
+.I ftp.math.technion.ac.il
+(132.68.115.2).
+
+.SH AUTHOR
+Dr. Zvi Har'El,
+.br
+Department of Mathematics,
+.br
+Technion, Israel Institute of Technology,
+.br
+Haifa 32000, Israel.
+.br
+E-mail: rl@math.technion.ac.il
+.SH APPENDIX
+.TS
+center box;
+c s s s s s
+n1 l1 r | n1 l1 r.
+\fBPentateuch Reading Sequence\fP
+_
+	\fBPortion\fP	\fBVerses\fP		\fBPortion\fP	\fBVerses\fP
+_
+ 1	Bereshit	\fIGenesis\fP 1:1-6:8	28	Metzora	14:1-15:33
+ 2	Noah	6:9-11:32	29	Acharei-Mot	16:1-18:30
+ 3	Lech-Lecha	12:1-17:27	30	Kedoshim	19:1-20:27
+ 4	Vayera	18:1-22:24	31	Emor	21:1-24:23
+ 5	Chayei-Sarah	23:1-25:18	32	Behar	25:1-26:2
+ 6	Toldot	25:19-28:9	33	Bechukotai	26:3-27:34
+ 7	Vayetze	28:10-32:2	34	Bamidbar	\fINumbers\fP 1:1-4:20
+ 8	Vayishlach	32:3-36:43	35	Naso	4:21-7:89
+ 9	Vayeshev	37:1-40:23	36	Beha'alotcha	8:1-12:15
+10	Miketz	41:1-44:17	37	Shelach	13:1-15:15
+11	Vayigash	44:18-47:27	38	Korach	16:1-18:32
+12	Vayechi	47:28-50:26	39	Chukat	19:1-22:1
+13	Shemot	\fIExodus\fP 1:1-6:1	40	Balak	22:2-25:9
+14	Vaera	6:2-9:35	41	Pinchas	25:10-30:1
+15	Bo	10:1-13:16	42	Matot	30:2-32:42
+16	Beshalach	13:17-17:16	43	Mase'ei	33:1-36:13
+17	Yitro	18:1-20:23	44	Devarim	\fIDeutronomy\fP 1:1-3:22
+18	Mishpatim	21:1-24:18	45	Vaetchanan	3:23-7:11
+19	Teruma	25:1-27:19	46	Ekev	7:12-11:25
+20	Tetzave	27:20-30:10	47	Re'e	11:26-16:17
+21	Ki-Tisa	30:11-34:35	48	Shoftim	16:18-21:9
+22	Vayakhel	35:1-38:20	49	Ki-Tetze	21:10-25:19
+23	Pekudei	38:21-40:38	50	Ki-Tavo	26:1-29:8
+24	Vayikra	\fILeviticus\fP 1:1-5:26	51	Nitzavim	29:9-30:20
+25	Tzav	6:1-8:36	52	Vayelech	31:1-31:30
+26	Shemini	9:1-11:47	53	Ha'azinu	32:1-32:52
+27	Tazri'a	12:1-13:59	54	Vezot-Habracha	33:1-34:12
+.TE

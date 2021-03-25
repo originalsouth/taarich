@@ -1,0 +1,26 @@
+The ftp directory calendar/gauss on gauss.technion.ac.il contains:
+
+	REAMDE:	this file.
+	makefile:	guess what...
+	taarich.c:	display Hebrew dates - a C program.
+	taaric.man:	taarich (1) - troff/eqn/man source.
+	taarich.txt:		- Unicode English text version.
+	taarich.ps:	 	- PostScript version.
+	luach.c:	typeset Hebrew calendars - a C program.
+	luach.man:	luach (1) - troff/man source.
+	luach.txt:		- Unicode English text version.
+	luach.ps:		- PostScript version.
+	gauss.c:	Gauss formula for passover - a C program.
+	gauss.ms:	"Gauss Formula for the Julian Date of Passover"
+				- troff/eqn/tbl/ms source.
+	gauss.txt:		- Unicode English text version.
+	gauss.ps:		- PostScript version.
+	reading.ms:	"The Torah Reading Sequence" - troff/eqn/tbl/ms source.
+	reading.txt:		- Unicode English text version.
+	reading.ps:		- Pcompressed ostScript version.
+
+Dr. Zvi Har'El     mailto:rl@math.technion.ac.il     Department of Mathematics
+tel:+972-54-227607 icq:179294841     Technion - Israel Institute of Technology
+fax:+972-4-8293388 http://www.math.technion.ac.il/~rl/     Haifa 32000, ISRAEL
+"If you can't say somethin' nice, don't say nothin' at all." -- Thumper (1942)
+                               Saturday, 13 Tammuz 5763, 12 July 2003,  7:02PM
